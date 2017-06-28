@@ -1,0 +1,11 @@
+canvas {
+  background-image: url('/images/human-body-front-and-back-diagram-of-the-human-body-front-and-back-diagram-of-the-human.jpg');
+  border: 1px solid black;
+  background-size: 700px 700px;
+  background-repeat: no-repeat;
+  margin: auto;
+ }
+.dataDiv{
+  height:100px;
+  overflow: scroll;
+}

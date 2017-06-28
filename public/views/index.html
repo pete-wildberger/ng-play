@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <script src="vendors/angular.min.js" charset="utf-8"></script>
+<script src="/vendors/angular-route.min.js" charset="utf-8"></script>
+  <script src="/scripts/client.js" charset="utf-8"></script>
+  <script src="/scripts/services/http.service.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body ng-app="myApp" ng-controller="NgPlay as np" onresize="sizeUP()">
+  <main ng-init="np.onReady()">
+
+          <div class="dataDiv" >
+            <p ng-repeat="x in np.dotData"> {{ x.name }} <button ng-click="np.showIt($index)">Showit</button></p>
+          </div>
+          <div>
+          <canvas  ng-mousemove="np.myFunc($event)" ng-click="np.coords()" id="canvas" class='img-responsive' width="700px" height="700px"></canvas>
+
+
+            <h1 >MOUSE HERERERERER</h1>
+            <input type="text"ng-model="np.name">
+            <button type="button" ng-click="np.saveIt()">SAVE to DB</button>
+          </div>
+
+      <ng-view></ng-view>
+  </main>
+</body>
+
+</html>
