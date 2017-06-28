@@ -15,20 +15,28 @@
 
 <body ng-app="myApp" ng-controller="NgPlay as np" onresize="sizeUP()">
   <main ng-init="np.onReady()">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <canvas  ng-mousemove="np.myFunc($event)" ng-click="np.coords()" id="canvas" class='img-responsive' width="520px" height="520px"></canvas>
 
-          <div class="dataDiv" >
+
+          <h1 >MOUSE HERERERERER</h1>
+          <input type="text"ng-model="np.name">
+          <button type="button" ng-click="np.saveIt()">SAVE to DB</button>
+        </div>
+
+        <div class="col-md-12">
+
+        </div>
+          <div class="col-md-6 dataDiv" >
             <p ng-repeat="x in np.dotData"> {{ x.name }} <button ng-click="np.showIt($index)">Showit</button></p>
           </div>
-          <div>
-          <canvas  ng-mousemove="np.myFunc($event)" ng-click="np.coords()" id="canvas" class='img-responsive' width="700px" height="700px"></canvas>
 
-
-            <h1 >MOUSE HERERERERER</h1>
-            <input type="text"ng-model="np.name">
-            <button type="button" ng-click="np.saveIt()">SAVE to DB</button>
-          </div>
 
       <ng-view></ng-view>
+      </div>
+      </div>
   </main>
 </body>
 

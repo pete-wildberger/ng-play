@@ -10,7 +10,7 @@ var windowSize = function() {
   var h = window.outerHeight;
   var txt = "Window size: width=" + w + ", height=" + h;
   console.log(txt);
-  resizedX = (window.outerWidth - 700) / 2;
+  resizedX = (window.outerWidth - 520) / 2;
   console.log(resizedX, resizedY);
 };
 var sizeUP = function() {
